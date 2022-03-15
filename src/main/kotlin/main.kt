@@ -3,13 +3,12 @@ fun main() {
     val prevTransfer = 70000_00
     val transfer = 6000_00
 
-    println("С картой $typeCard, с учетом уже переведённой суммы " + prevTransfer / 100 +
-            " рублей, при переводе " + transfer/100 + " рублей, комиссия составит:")
-    println((calcComission(typeCard,prevTransfer, transfer) / 100).toString() + " рублей")
+    println(
+        "С картой $typeCard, с учетом уже переведённой суммы " + prevTransfer / 100 +
+                " рублей, при переводе " + transfer / 100 + " рублей, комиссия составит:"
+    )
+    println((calcComission(typeCard, prevTransfer, transfer) / 100).toString() + " рублей")
 }
-
-
-
 
 fun calcComission(typeCard: String = "Vk Pay", prevTransfer: Int = 0, transfer: Int): Int {
     var result = 0
